@@ -1,0 +1,31 @@
+.tiny-tooltip-text {
+    visibility: hidden;
+    width: auto;
+    background-color: rgb(25, 25, 25);
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: .4rem .7rem;
+    position: absolute;
+    z-index: 1300;
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+@media only screen and (min-width: 993px) {
+    .tiny-tooltip-text {
+        max-width: 60%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .tiny-tooltip-text {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tiny-tooltip-text {
+        max-width: 94%;
+    }
+}

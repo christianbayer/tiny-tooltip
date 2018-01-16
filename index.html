@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tiny Tooltip</title>
+    <!--<link rel="stylesheet" href="dist/css/tiny-tooltip.min.css">-->
+    <link rel="stylesheet" href="src/css/tiny-tooltip.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Questrial|Rammetto+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300:600|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            padding-bottom: 3rem;
+        }
+
+        header {
+            background-color: #2196f3;
+            padding: 1rem;
+        }
+
+        main {
+            text-align: justify;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 3rem;
+            font-family: 'Reem Kufi', sans-serif;
+            margin: 3rem;
+        }
+
+        h4 {
+            font-size: 1.8rem;
+            padding: 2rem 0 1rem 0;
+            margin: 0;
+        }
+
+        .concept {
+            font-weight: 600;
+            border-bottom: 1px dotted;
+        }
+
+        .btn {
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+            background-color: #ff9800;
+            padding: .8rem 1.6rem;
+            border-radius: 4px;
+            float: left;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .icons-example a {
+            color: #ff9800;
+        }
+        .vars {
+            overflow: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        table tr {
+            border-bottom: 1px solid #d0d0d0;
+        }
+
+        table tbody tr:last-of-type {
+            border-bottom: none;
+        }
+
+        table thead tr th {
+            font-weight: 600;
+        }
+
+        table th, table td {
+            padding: 15px 5px;
+            display: table-cell;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        pre[class*=language-] {
+            line-height: 0;
+            overflow-y: hidden;
+        }
+
+        code[class*=language-] {
+            line-height: 1;
+        }
+
+        code[class*=language-],
+        pre[class*=language-] {
+            padding: 0;
+            margin: 0;
+            tab-size: 0;
+            display: block;
+        }
+
+        @media (max-width: 1199px) {
+            main {
+                max-width: 80%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            main {
+                max-width: 86%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            main {
+                max-width: 92%;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Tiny Tooltip</h1>
+</header>
+<main>
+    <h4>Use it as a word concept</h4>
+    <p>Ut vulputate, velit eget aliquam efficitur, ligula nisi volutpat orci, vitae
+        <span class="concept tiny-tooltip" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet est non nunc placerat volutpat. Aliquam imperdiet mi ipsum, et rhoncus ante volutpat quis. Maecenas venenatis semper dui ac euismod. Etiam aliquet elementum massa, ut convallis ante blandit sit amet. Curabitur et arcu massa. Curabitur consectetur sapien at fringilla iaculis. Morbi pretium lobortis lobortis. Vivamus leo libero, lacinia at lobortis ut, ultrices id nisl. Nulla aliquam odio tortor. Vestibulum et orci congue, laoreet felis ac, luctus lorem. Duis fermentum, ante et sollicitudin mattis, massa mauris ultricies elit, ac fermentum est dolor at libero. Morbi porttitor consectetur ipsum ut tempus.">iaculis sem nisl</span> quis orci. Quisque vehicula a diam eu facilisis. Etiam sit amet augue. Aliquam in risus et dui finibus egestas. Fusce rhoncus tellus at ligula gravida lobortis. Donec
+        <span class="concept tiny-tooltip" data-tooltip="Lorem ipsum dolor sit amet">neque</span> ultricies purus tincidunt, imperdiet massa a, suscipit quam. Mauris a lobortis dui, quis convallis ipsum. Donec maximus at magna vitae egestas. Fusce convallis ante at semper rutrum. Mauris faucibus varius suscipit. Mauris rhoncus velit velit.
+    </p>
+    <div class="clearfix"></div>
+    <h4>Over Buttons</h4>
+    <a href="javascript:void(0);" class="btn tiny-tooltip-delay" data-tooltip="I'm a tooltip with delay!">Button</a>
+    <div class="clearfix"></div>
+    <h4>Over icons</h4>
+    <div class="icons-example">
+        <a href="javascript:void(0);"><i class="material-icons tiny-tooltip" data-tooltip="Add new">add</i></a>
+        <a href="javascript:void(0);"><i class="material-icons tiny-tooltip" data-tooltip="Edit">edit</i></a>
+        <a href="javascript:void(0);"><i class="material-icons tiny-tooltip" data-tooltip="Delete">delete</i></a>
+        <a href="javascript:void(0);"><i class="material-icons tiny-tooltip" data-tooltip="Copy">content_copy</i></a>
+        <a href="javascript:void(0);"><i class="material-icons tiny-tooltip" data-tooltip="Send an email">send</i></a>
+    </div>
+    <div class="clearfix"></div>
+    <h4>Basic usage</h4>
+    <pre>
+        <code class="language-javascript">
+            $(".tiny-tooltip").tinyTooltip();
+        </code>
+    </pre>
+    <div class="clearfix"></div>
+    <h4>Options</h4>
+    <div class="vars">
+    <table>
+        <thead>
+        <tr>
+            <th>Option name</th>
+            <th>Description</th>
+            <th>Default value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>delay</td>
+            <td>Delay for the tooltip appear (in milliseconds)</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>class</td>
+            <td>Custom class for the tooltip element</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>removeOnScroll</td>
+            <td>If the window scrolls, the tooltip disapear</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>rem</td>
+            <td>Default value for 1 rem</td>
+            <td>$("body").css('font-size')</td>
+        </tr>
+        <tr>
+            <td>disableDelayOnTouch</td>
+            <td>If there will be delay on touch devices</td>
+            <td>true</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/prism.min.js"></script>
+<!--<script src="dist/js/tiny-tooltip.min.js"></script>-->
+<script src="src/js/tiny-tooltip.js"></script>
+<script>
+    $('.tiny-tooltip').tinyTooltip();
+    $('.tiny-tooltip-delay').tinyTooltip({
+        delay: 300
+    });
+</script>
+</body>
+</html>
